@@ -1,8 +1,8 @@
 const express = require('express')
 const { ObjectId } = require('mongodb')
 const {MongoClient} = require('mongodb')
-const url = 'mongodb://localhost:27017/bookStore'
-// let url = 'mongodb+srv://tranngochai:hai123@cluster0.myhmqqh.mongodb.net/?retryWrites=true&w=majority'
+// const url = 'mongodb://localhost:27017/bookStore'
+let url = 'mongodb+srv://tranngochai:hai123@cluster0.myhmqqh.mongodb.net/?retryWrites=true&w=majority'
 let dbConnection
 const connectToDb = (callback) => {
     MongoClient.connect(url)
