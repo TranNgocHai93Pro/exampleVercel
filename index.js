@@ -18,7 +18,7 @@ const connectToDb = (callback) => {
 const getDb = () => dbConnection
 
 const app = express()
-let PORT = process.env.PORT || 3004
+let PORT = process.env.PORT || 9001
 app.use(express.json())// update data dang json
 let db
 connectToDb ((err) => {
