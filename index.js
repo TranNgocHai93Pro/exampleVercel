@@ -2,6 +2,8 @@ const express = require('express')
 const { ObjectId } = require('mongodb')
 const {MongoClient} = require('mongodb')
 require('dotenv').config()
+const app = express();
+
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     next();
@@ -22,7 +24,7 @@ const connectToDb = (callback) => {
 }
 const getDb = () => dbConnection
 
-const app = express()
+
 let PORT = process.env.PORT || 9001
 app.use(express.json())// update data dang json
 let db
