@@ -1,6 +1,7 @@
 const express = require('express')
 const { ObjectId } = require('mongodb')
 const {MongoClient} = require('mongodb')
+require('dotenv').config()
 // const url = 'mongodb://localhost:27017/bookStore'
 let url = 'mongodb+srv://tranngochai:hai123@cluster0.myhmqqh.mongodb.net/?retryWrites=true&w=majority'
 let dbConnection
