@@ -4,10 +4,10 @@ const {MongoClient} = require('mongodb')
 require('dotenv').config()
 const app = express();
 
-// app.use((req, res, next) => {
-//     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-//     next();
-//   });
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  });
 // const url = 'mongodb://localhost:27017/bookStore'
 let url = 'mongodb+srv://tranngochai:hai123@cluster0.myhmqqh.mongodb.net/?retryWrites=true&w=majority'
 let dbConnection
